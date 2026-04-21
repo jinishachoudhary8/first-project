@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grind Landing Page</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS (CDN Script) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Inter"', 'sans-serif'],
+                        serif: ['"Instrument Serif"', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        /* Automatically apply Instrument Serif to all headings */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Instrument Serif', serif;
+            font-weight: normal;
+        }
+    </style>
+</head>
+<body class="bg-[#FAF7F2] text-[#2B1810] font-sans antialiased min-h-screen">
+    
+    <!-- NAVBAR -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-[#FAF7F2]/90 backdrop-blur-md border-b border-[#2B1810]/5">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="font-serif text-3xl">Grind.</a>
+            <div class="hidden md:flex gap-8">
+                <a href="#about" class="text-[#2B1810]/80 hover:text-[#2B1810] font-medium transition-colors">About</a>
+                <a href="#menu" class="text-[#2B1810]/80 hover:text-[#2B1810] font-medium transition-colors">Menu</a>
+                <a href="#visit" class="text-[#2B1810]/80 hover:text-[#2B1810] font-medium transition-colors">Visit</a>
+            </div>
+            <button id="mobile-menu-btn" class="md:hidden text-[#2B1810] p-2 -mr-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+            </button>
+        </div>
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden bg-[#FAF7F2] border-b border-[#2B1810]/5 px-6 py-4 flex-col gap-4 shadow-xl md:hidden">
+            <a href="#about" class="mobile-link text-xl text-[#2B1810] font-medium block py-2">About</a>
+            <a href="#menu" class="mobile-link text-xl text-[#2B1810] font-medium block py-2">Menu</a>
+            <a href="#visit" class="mobile-link text-xl text-[#2B1810] font-medium block py-2">Visit</a>
+        </div>
+    </nav>
+
+    <main class="max-w-6xl mx-auto px-6 flex flex-col justify-center min-h-screen">
+        <div class="max-w-3xl">
+            <span class="block text-sm uppercase tracking-widest font-medium text-[#2B1810]/60 mb-6">
+                A coffee shop for people who care about details.
+            </span>
+            <h1 class="text-[5.5rem] sm:text-8xl md:text-9xl lg:text-[11rem] leading-[0.9] mb-8">
+                Grind.
+            </h1>
+            <p class="text-2xl md:text-3xl text-[#2B1810]/80 leading-snug mb-12">
+                Single-origin coffee. Considered interiors. Free wifi that actually works.
+            </p>
+            <div class="flex flex-col sm:flex-row sm:items-center gap-8">
+                <a href="#visit" class="bg-[#D4763E] text-white rounded-full px-8 py-4 font-medium hover:bg-[#ba6231] transition-colors text-center">
+                    Find us
+                </a>
+                <a href="#menu" class="font-medium text-[#2B1810] underline decoration-[#2B1810]/30 underline-offset-8 hover:decoration-[#2B1810] transition-colors text-center sm:text-left">
+                    See the menu
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="max-w-6xl mx-auto px-6 py-24">
+        <h2 class="text-5xl mb-12">
+            Why Grind
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24">
+            <div>
+                <p class="text-lg md:text-xl text-[#2B1810]/80 leading-relaxed">
+                    We serve meticulously sourced, single-origin beans, roasted to highlight their unique profiles. Our space was designed with intention—a thoughtfully curated haven for creatives, designers, and deep thinkers who need an environment that works as hard as they do.
+                </p>
+            </div>
+            <div>
+                <ul class="space-y-6">
+                    <li class="flex items-start">
+                        <span class="text-[#D4763E] mr-4 text-xl leading-none mt-1">&bull;</span>
+                        <span class="text-lg md:text-xl text-[#2B1810]/80">Ethically sourced, single-origin beans</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-[#D4763E] mr-4 text-xl leading-none mt-1">&bull;</span>
+                        <span class="text-lg md:text-xl text-[#2B1810]/80">Designed for long working sessions</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-[#D4763E] mr-4 text-xl leading-none mt-1">&bull;</span>
+                        <span class="text-lg md:text-xl text-[#2B1810]/80">Quiet hours, 2pm&ndash;5pm, Mon&ndash;Fri</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- MENU SECTION -->
+    <section id="menu" class="max-w-4xl mx-auto px-6 py-24">
+        <h2 class="text-5xl mb-16 text-center">
+            The Menu
+        </h2>
+        <div class="space-y-6">
+            <!-- Menu Item 1 -->
+            <div class="flex items-baseline">
+                <span class="text-xl md:text-2xl font-medium">Espresso</span>
+                <div class="flex-grow border-b-2 border-dotted border-[#2B1810]/20 mx-4"></div>
+                <span class="text-xl md:text-2xl">&nbsp;&#8377;180</span>
+            </div>
+            <!-- Menu Item 2 -->
+            <div class="flex items-baseline">
+                <span class="text-xl md:text-2xl font-medium">Flat White</span>
+                <div class="flex-grow border-b-2 border-dotted border-[#2B1810]/20 mx-4"></div>
+                <span class="text-xl md:text-2xl">&nbsp;&#8377;220</span>
+            </div>
+            <!-- Menu Item 3 -->
+            <div class="flex items-baseline">
+                <span class="text-xl md:text-2xl font-medium">Pour Over</span>
+                <div class="flex-grow border-b-2 border-dotted border-[#2B1810]/20 mx-4"></div>
+                <span class="text-xl md:text-2xl">&nbsp;&#8377;280</span>
+            </div>
+            <!-- Menu Item 4 -->
+            <div class="flex items-baseline">
+                <span class="text-xl md:text-2xl font-medium">Cold Brew</span>
+                <div class="flex-grow border-b-2 border-dotted border-[#2B1810]/20 mx-4"></div>
+                <span class="text-xl md:text-2xl">&nbsp;&#8377;240</span>
+            </div>
+            <!-- Menu Item 5 -->
+            <div class="flex items-baseline">
+                <span class="text-xl md:text-2xl font-medium">Matcha Latte</span>
+                <div class="flex-grow border-b-2 border-dotted border-[#2B1810]/20 mx-4"></div>
+                <span class="text-xl md:text-2xl">&nbsp;&#8377;260</span>
+            </div>
+            <!-- Menu Item 6 -->
+            <div class="flex items-baseline">
+                <span class="text-xl md:text-2xl font-medium">Affogato</span>
+                <div class="flex-grow border-b-2 border-dotted border-[#2B1810]/20 mx-4"></div>
+                <span class="text-xl md:text-2xl">&nbsp;&#8377;320</span>
+            </div>
+        </div>
+        <div class="mt-12 text-center">
+            <p class="italic text-[#2B1810]/60">
+                Prices include GST. Beans change weekly.
+            </p>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="visit" class="max-w-6xl mx-auto px-6 py-24">
+        <h2 class="text-5xl mb-12">
+            Come find us
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24">
+            <div class="flex flex-col justify-between">
+                <div>
+                    <p class="text-lg md:text-xl text-[#2B1810]/80 leading-relaxed mb-8 max-w-sm">
+                        12, Design District, 2nd Floor.<br>
+                        Open 8am&ndash;8pm, closed Wednesdays.
+                    </p>
+                    <div class="flex gap-6 mt-12">
+                        <a href="#" class="font-medium text-[#2B1810] underline decoration-[#2B1810]/30 underline-offset-8 hover:decoration-[#2B1810] transition-colors">Instagram</a>
+                        <a href="#" class="font-medium text-[#2B1810] underline decoration-[#2B1810]/30 underline-offset-8 hover:decoration-[#2B1810] transition-colors">Are.na</a>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-stone-200 w-full aspect-video rounded-2xl flex items-center justify-center">
+                <span class="text-[#2B1810]/40 font-medium tracking-widest uppercase">Map</span>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Simple mobile menu toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const links = document.querySelectorAll('.mobile-link');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+            menu.classList.toggle('flex');
+        });
+
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+                menu.classList.remove('flex');
+            });
+        });
+    </script>
+</body>
+</html>
